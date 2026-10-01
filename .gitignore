@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Environment variables (NEVER commit real keys)
+.env
+.jwt-secret
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+
+# AI answer cache
+saved-answers.json
+
+# OS files
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Uploads (if any temp files)
+uploads/

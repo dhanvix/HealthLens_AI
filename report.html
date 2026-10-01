@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Detailed analysis of your lab report with age-adjusted reference ranges and AI-powered explanations.">
+<title>Report analysis | HealthLens AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="index.html"><img src="logo.jpg" alt="HealthLens AI Logo">Health<span>Lens</span> AI</a>
+  <a href="dashboard.html">↑ Upload another</a>
+</div></nav>
+
+<main class="wrap">
+  <h1>📊 Your report analysis</h1>
+  <p class="sub">Compared against the reference ranges shown on the report.</p>
+
+  <div class="stats fade-up" id="stats"></div>
+
+  <div class="table-wrap fade-up">
+    <table>
+      <thead><tr><th>Test</th><th>Result</th><th>Reference range</th><th>Status</th></tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <section class="card panel fade-up">
+    <h2>💡 Simple explanation</h2>
+    <ul id="explain"></ul>
+  </section>
+
+  <button class="btn" id="qBtn">❓ Questions to discuss with your doctor</button>
+  <section class="card panel hidden" id="qPanel" style="margin-top:16px">
+    <h2>🩺 Questions to discuss with your doctor</h2>
+    <ul id="questions"></ul>
+  </section>
+
+
+  <section class="card panel fade-up" id="comparePanel" style="margin-top:24px">
+    <h2>📈 Compare with previous report</h2>
+    <p class="sub" id="compareInfo"></p>
+    <div class="table-wrap" id="cmpWrap">
+      <table>
+        <thead><tr><th>Test</th><th>Previous</th><th>Latest</th><th>Change</th><th>vs. reference range</th></tr></thead>
+        <tbody id="cmpBody"></tbody>
+      </table>
+    </div>
+    <p class="sub" style="margin-top:8px;font-size:.85rem">Green bar = reference range. Hollow dot = previous, filled dot = latest. A change does not by itself show whether someone is better or worse; discuss trends with a doctor.</p>
+  </section>
+
+  <p class="note">⚠️ Out-of-range results can have many explanations. A qualified healthcare professional should interpret them together with your symptoms, history and other results. This tool does not diagnose.</p>
+</main>
+
+<footer>HealthLens AI does not give medical advice or diagnosis.</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

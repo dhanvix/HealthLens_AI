@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Upload your blood test report for instant AI-powered analysis. Get clear explanations and questions for your doctor.">
+<title>Upload report | HealthLens AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="index.html"><img src="logo.jpg" alt="HealthLens AI Logo">Health<span>Lens</span> AI</a>
+  <a href="report.html">Sample report</a>
+</div></nav>
+
+<main class="wrap">
+  <h1>📤 Upload your lab report</h1>
+  <p class="sub">Choose who the report is for, then add the PDF or a photo.</p>
+
+  <div class="card fade-up" style="margin-bottom:16px;display:grid;gap:12px">
+    <label>Report is for<br>
+      <select id="profileSel" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;font:inherit;background:rgba(255,255,255,.7)"></select>
+    </label>
+    <details>
+      <summary>+ Add a new person (you, a parent, a child...)</summary>
+      <div style="display:grid;gap:10px;margin-top:10px">
+        <label>Name<br><input id="pName" type="text" maxlength="40" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;font:inherit;background:rgba(255,255,255,.7)"></label>
+        <label>Date of birth<br><input id="pDob" type="date" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;font:inherit;background:rgba(255,255,255,.7)"></label>
+        <label>Sex (optional, only used to pick the right reference range)<br>
+          <select id="pSex" style="width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;font:inherit;background:rgba(255,255,255,.7)">
+            <option value="">Prefer not to say</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+          </select>
+        </label>
+        <button class="btn ghost" id="addProfile" type="button">💾 Save person</button>
+      </div>
+    </details>
+  </div>
+
+  <div class="drop fade-up">
+    <p>PDF, or a photo (JPG / PNG) of your report</p>
+    <input type="file" id="fileInput" accept=".pdf,image/jpeg,image/png,image/webp" hidden>
+    <button class="btn" id="chooseBtn">📁 Choose file</button>
+    <div id="fileName"></div>
+  </div>
+
+  <button class="btn" id="analyzeBtn">🔬 Analyze report</button>
+  <button class="btn ghost" id="demoBtn">🧪 Use demo report</button>
+
+  <p class="note">🔒 Only test values, age and sex are sent to the AI for the explanation; the name you type here is never sent. Photos and scanned PDFs are sent to Google Gemini to be read, and a photo may itself show printed names, so crop them out if you can. Text PDFs are read on this server. Saved reports are stored in the app's database for your account only.</p>
+</main>
+
+<footer>HealthLens AI does not give medical advice or diagnosis.</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

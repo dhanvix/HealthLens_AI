@@ -1,0 +1,7 @@
+.env
+.jwt-secret
+node_modules
+saved-answers.json
+healthlens.db
+healthlens.db-shm
+healthlens.db-wal

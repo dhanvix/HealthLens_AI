@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Review and verify the values extracted from your lab report before analysis.">
+<title>Check values | HealthLens AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="index.html"><img src="logo.jpg" alt="HealthLens AI Logo">Health<span>Lens</span> AI</a>
+  <a href="dashboard.html">← Start over</a>
+</div></nav>
+
+<main class="wrap">
+  <h1>✅ Check the values we read</h1>
+  <p class="sub" id="reviewSrc"></p>
+
+  <div class="table-wrap fade-up">
+    <table>
+      <thead><tr><th>Test</th><th>Value</th><th>Unit</th><th>Lowest normal</th><th>Highest normal</th><th></th></tr></thead>
+      <tbody id="reviewBody"></tbody>
+    </table>
+  </div>
+
+  <button class="btn ghost" id="addRow" type="button">➕ Add a row</button>
+  <button class="btn" id="confirmBtn" type="button">✅ These are correct, analyze</button>
+
+  <p class="note">📝 Fix any wrong number, unit or range before analyzing. The analysis is only as accurate as these values.</p>
+</main>
+
+<footer>HealthLens AI does not give medical advice or diagnosis.</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

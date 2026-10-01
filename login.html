@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Log in to HealthLens AI to save and compare your lab reports over time.">
+<title>Log in | HealthLens AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="index.html"><img src="logo.jpg" alt="HealthLens AI Logo">Health<span>Lens</span> AI</a>
+  <a href="report.html">Sample report</a>
+</div></nav>
+
+<main class="wrap" style="max-width:460px">
+  <h1>🔐 Log in or create an account</h1>
+  <p class="sub">Your reports are saved to your account so you can find and compare them later.</p>
+  <div class="card fade-up" style="display:grid;gap:14px">
+    <label>Email<br><input id="email" type="email" autocomplete="email" style="width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:rgba(255,255,255,.7)"></label>
+    <label>Password (at least 6 characters)<br><input id="password" type="password" autocomplete="current-password" style="width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:rgba(255,255,255,.7)"></label>
+    <div>
+      <button class="btn" id="loginBtn" type="button">🚀 Log in</button>
+      <button class="btn ghost" id="registerBtn" type="button">✨ Create account</button>
+    </div>
+    <p id="msg" role="alert" style="color:var(--bad)"></p>
+  </div>
+</main>
+
+<footer>HealthLens AI does not give medical advice or diagnosis.</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
