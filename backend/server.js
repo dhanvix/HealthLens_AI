@@ -564,15 +564,7 @@ app.post("/extract", auth, upload.single("report"), async (req, res) => {
 // START SERVER
 // =========================================================================
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  const userCount = db.prepare("SELECT COUNT(*) as c FROM users").get().c;
-  const reportCount = db.prepare("SELECT COUNT(*) as c FROM reports").get().c;
-  console.log("");
-  console.log("  HealthLens AI Backend Running");
-  console.log("  URL:     http://localhost:" + PORT);
-  console.log("  Users:   " + userCount);
-  console.log("  Reports: " + reportCount);
-  console.log("  DB:      healthlens.db (SQLite)");
-  console.log("  Tables:  users, profiles, reports, login_history, user_activity, voice_queries");
-  console.log("");
+
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`HealthLens AI Backend Running on port ${PORT}`);
 });
